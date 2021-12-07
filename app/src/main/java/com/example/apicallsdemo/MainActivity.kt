@@ -15,6 +15,20 @@ class MainActivity : AppCompatActivity() {
         return jsonArray[0].toString()
     }
 
+    private fun fetchData(urlString: String) {
+        val thread = Thread{
+            //some long running task logic here
+        }
+        thread.start()
+
+    }
+
+    private fun updateTextView(text: String) {
+        runOnUiThread{
+            binding.textView.text = text
+        }
+    }
+
     fun getQuote(view: View){
 
     }
